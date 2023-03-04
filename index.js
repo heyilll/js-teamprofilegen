@@ -81,10 +81,10 @@ function start () {
                 message: "Which role would you like to create next?",
                 choices: ['Engineer','Intern','Done'],
             },
-        ]).then(userChoice => {
-            if (userChoice === 'engineer') {
+        ]).then(answer => {
+            if (answer.role === 'Engineer') {
                 createEngineer();
-            } else if (userChoice === 'intern') {
+            } else if (answer.role === 'Intern') {
                 createIntern();
             } else {
                 buildTeam();
